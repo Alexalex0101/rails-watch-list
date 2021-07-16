@@ -12,18 +12,37 @@
       </div>
     <% end %>
   </div>
-  <% @movies.each do |movie| %>
+
+  <div class="accordion">
+    <ul>
+      <% @movies.each do |movie| %>
+        <li>
+          <div class="image_title">
+            <a href="#"><%= movie.title %></a>
+            <p><%= movie.overview %></p>
+            <p><%= movie.rating %></p>
+          </div>
+          <a href="https://ibb.co/gGv6QS"> <img src=<%= movie.poster_url %> border=0></a>
+        </li>
+  <% end %>
+    </ul>
+  </div>
+
+
+
+
+<!--   <#% @movies.each do |movie| %>
     <div class="card-movie">
-      <img src=<%= movie.poster_url %> />
-        <!-- <div class="card-info"> -->
+      <img src=<%#= movie.poster_url %> />
+         <div class="card-info"> -->
           <!-- <div> -->
-          <h2><%= movie.title %></h2>
-          <p><%= movie.overview %></p>
+          <!-- <h2><%#= movie.title %></h2> -->
+          <!-- <p><%#= movie.overview %></p> -->
           <!-- </div> -->
           <!-- <div> -->
-            <h2 class="card-rating"><%= movie.rating %></h2>
-            <td><%#= link_to 'Show', movie %></td>
-          </div>
-      <% end %>
+            <!-- <h2 class="card-rating"><%#= movie.rating %></h2> -->
+            <!-- <td><%#= link_to 'Show', movie %></td> -->
+          <!-- </div> -->
+      <%# end %>
 
-<div class=
+<!-- <div class= -->
