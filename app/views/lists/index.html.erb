@@ -1,32 +1,37 @@
-<h1>Movies</h1>
-
-<%= link_to 'Create a movie list', new_list_path, class: 'btn btn-flat' %>
-<div class="row">
-    <% @lists.each do |list| %>
-      <div class="co-12 colsm-6 col-md-4">
-        <%= link_to list_path(list), class:'text-decoration-none' do %>
-          <div class="card-category">
-            <%= list.name %>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
-  </div>
-
-  <div class="accordion">
+<div class="header">
+  <h1>Movies</h1>
+  <%= link_to 'Create a movie list', new_list_path, class: 'btn btn-flat' %>
+  <div class="row">
     <ul>
-      <% @movies.each do |movie| %>
+      <% @lists.each do |list| %>
         <li>
-          <div class="image_title">
-            <a href="#"><%= movie.title %></a>
-            <p><%= movie.overview %></p>
-            <p><%= movie.rating %></p>
+          <div class="co-12 colsm-6 col-md-4">
+            <%= link_to list_path(list), class:'text-decoration-none' do %>
+              <div class="card-category">
+                <%= list.name %>
+              </div>
           </div>
-          <a href="https://ibb.co/gGv6QS"> <img src=<%= movie.poster_url %> border=0></a>
         </li>
-  <% end %>
+            <% end %>
+      <% end %>
     </ul>
   </div>
+</div>
+
+    <div class="accordion">
+      <ul>
+        <% @movies.each do |movie| %>
+          <li>
+            <div class="image_title">
+              <a href="#"><%= movie.title %></a>
+              <p><%= movie.overview %></p>
+              <p><%= movie.rating %></p>
+            </div>
+              <img src=<%= movie.poster_url %> border=0>
+          </li>
+    <% end %>
+      </ul>
+    </div>
 
 
 

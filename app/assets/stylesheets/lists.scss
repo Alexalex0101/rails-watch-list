@@ -8,14 +8,20 @@
 }
 
 body {
-  background-image: linear-gradient(to top, #13547a 0%, #80d0c7 100%);
+  background-image: linear-gradient(#eeaeca, #94bbe9);
+  background-size: cover;
+  background-repeat: no-repeat;
   font-family: 'Roboto', sans-serif;
+  height: 100vh;
 }
 
 .container {
   width: 100%;
 }
 
+.header {
+  margin: 10px;
+}
 a {
   text-decoration: none;
   color: white;
